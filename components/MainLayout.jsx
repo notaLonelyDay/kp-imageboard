@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import Search from "./Search"
 import { HiMenuAlt2 } from "react-icons/hi"
 import MainMenu from "./MainMenu"
-import NewSnap from "./NewSnap"
+import NewImage from "./NewImage"
 import { Toaster } from "react-hot-toast"
 import axios from "axios"
 
@@ -37,8 +37,8 @@ export default function MainLayout({ children }) {
         <HiMenuAlt2 className="text-2xl" />
       </button>
 
-      {/* new snap modal */}
-      <NewSnap
+      {/* new image modal */}
+      <NewImage
         className={displayNew ? "flex" : "hidden"}
         setDisplayNew={setDisplayNew}
       />

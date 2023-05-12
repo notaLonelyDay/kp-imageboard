@@ -16,7 +16,7 @@ export default function MainMenu({ className, setDisplayNew, trending,  setDispl
       <Link href="/">
         <Image
           src={Logo}
-          alt="Snapify logo"
+          alt="ByBoard logo"
           className="w-[120px]"
           width="50"
           height="50"
@@ -37,7 +37,7 @@ export default function MainMenu({ className, setDisplayNew, trending,  setDispl
       >
         <HiOutlinePencilAlt className="mb-[2px] text-xl text-white/[.6]" />
         <span className="font-semibold text-sm md:text-[15px]">
-          Post a snap
+          Post a image
         </span>
       </button>
     </aside>

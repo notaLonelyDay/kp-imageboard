@@ -9,6 +9,7 @@ cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
   api_key: process.env.CLOUDINARY_API_KEY,
   api_secret: process.env.CLOUDINARY_API_SECRET,
+  version: false,
 })
 
 const updateUser = async (req, res) => {
@@ -77,7 +78,7 @@ const updateUser = async (req, res) => {
 
         // upload the image to cloudinary
         const uploadRes = await cloudinary.uploader.upload(image, {
-          folder: "snapify/users",
+          folder: "byboard/users",
           upload_preset: process.env.CLOUDINARY_UPLOAD_PRESET,
         })
 

@@ -1,3 +1,3 @@
-const getImageUrl = "https://res.cloudinary.com/snapify/image/upload/"
+const getImageUrl = "https://res.cloudinary.com/ddhavi6jc/image/upload/"
 
 export default getImageUrl

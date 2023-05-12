@@ -12,6 +12,7 @@ cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
   api_key: process.env.CLOUDINARY_API_KEY,
   api_secret: process.env.CLOUDINARY_API_SECRET,
+  version: false,
 })
 
 // default is 1mb, changed to 100 to avoid request errors
@@ -141,7 +142,7 @@ export default async function handler(req, res) {
         const uploadedImages = await Promise.all(
           images.map(async (image) => {
             const result = await cloudinary.uploader.upload(image, {
-              folder: "snapify/posts",
+              folder: "byboard/posts",
               upload_preset: process.env.CLOUDINARY_UPLOAD_PRESET,
             })
             return result.public_id
@@ -158,7 +159,7 @@ export default async function handler(req, res) {
 
         res.json({
           success: true,
-          message: "Your snap has been posted",
+          message: "Your image has been posted",
           post: createdPost,
         })
       } catch (error) {

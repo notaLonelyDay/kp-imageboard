@@ -18,7 +18,7 @@ const userSchema = new Schema(
     },
     image: {
       type: String,
-      default: "snapify/defaults/blank-avatar_v0t9d1",
+      default: "v1683836912/byboard/defaults/blank-avatar_v0t9d1",
     },
     followers: {
       type: Array,

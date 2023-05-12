@@ -4,7 +4,7 @@ import { IoMdClose } from "react-icons/io"
 import useNew from "../hooks/useNew"
 import ImageInput from "./ImageInput"
 
-export default function NewSnap({ className, setDisplayNew }) {
+export default function NewImage({ className, setDisplayNew }) {
   const inputFilesRef = useRef(null)
   const captionRef = useRef(null)
   const topicsRef = useRef(null)
@@ -37,7 +37,7 @@ export default function NewSnap({ className, setDisplayNew }) {
       <main className="max-h-full p-7 bg-white w-[90%] max-w-[500px] rounded-lg overflow-auto ">
         <form onSubmit={handleSubmit}>
           <div className="flex items-center justify-between mb-4">
-            <h2 className="font-bold text-xl tracking-tight">Post snap</h2>
+            <h2 className="font-bold text-xl tracking-tight">Post image</h2>
             <button
               type="button"
               onClick={() => setDisplayNew((prev) => !prev)}
@@ -128,7 +128,7 @@ export default function NewSnap({ className, setDisplayNew }) {
             } flex items-center gap-2 justify-center rounded-full py-2 px-6 transition-colors focus:ring outline-none  w-full max-w-[200px] hover:bg-blue-700 text-sm`}
             disabled={loading}
           >
-            <span className="text-semibold">Post snap</span>
+            <span className="text-semibold">Post image</span>
           </button>
         </form>
       </main>
